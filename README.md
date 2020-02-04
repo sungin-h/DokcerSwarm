@@ -4,7 +4,7 @@ Practice for using docker swarm
 # Enable Docker Swarm
 1. Open a terminal, and initialize Docker Swarm mode on Manager node:
 <div>docker swarm init</div>
-
+<br/>
 If all goes well, you should see a message similar to the following:
 <div> Swarm initialized: current node (tjjggogqpnpj2phbfbz8jd5oq) is now a manager.
  To add a worker to this swarm, run the following command:
@@ -12,18 +12,18 @@ If all goes well, you should see a message similar to the following:
  To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.</div>
 
 # My platform configuration
-Two nodes, a manager and a worker
-Manager : contains one V100 GPU(GDDR5 16GB)
-Worker : four V100 GPUs(HBM 32GB) linked with NVLINK
-Those nodes are connected in a same network.
+Two nodes, a manager and a worker<br/>
+**Manager** : contains one V100 GPU(GDDR5 16GB)<br/>
+**Worker** : four V100 GPUs(HBM 32GB) linked with NVLINK<br/>
+Those nodes are connected in a same network.<br/>
 
 
 # Reference
-**Official document on Docker**
+**Official document on Docker**<br/>
 https://docs.docker.com
 
-**docker command line reference**
+**docker command line reference**<br/>
 https://docs.docker.com/engine/reference/commandline/docker/
 
-**swarm command line reference**
+**swarm command line reference**<br/>
 https://docs.docker.com/engine/reference/commandline/swarm_init/
