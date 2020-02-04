@@ -1,0 +1,34 @@
+#stop all containers:
+docker stop $(docker ps -a -q)
+
+#stop all containers by force
+docker kill $(docker ps -q)
+
+#remove all containers
+docker rm $(docker ps -a -q)
+
+#remove all docker images
+docker rmi $(docker images -q)
+
+#purge the rest
+docker system prune --all --force --volumes
+
+#show running containers # -a option stands all
+docker ps
+
+#run a command in a running container
+docker exec -it [container] [cmd]
+
+#run container with privileged authority
+docker run -it --privileged --gpus all [container] [cmd]
+
+
+#build image, tagged [name], from [path] Dockerfile
+docker build -t [name] [path] 
+
+#Dockerfile
+###FROM [IMAGE] ...
+###RUN <command> or RUN ["executable", "param1", "param2", ...]
+###CMD # only one CMD instruction in Dockerfile. CMD is to provide defaults for an executing container.
+###COPY [--chown=<user>:<group>] <src>... <dest>
+
